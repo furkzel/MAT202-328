@@ -246,7 +246,7 @@
 	où la vitesse de l'onde $c(t ,x)$ dépend maintenant des deux variables temps est espace.
 
 	\begin{enumerate}
-		\item n définit les courbes caractéristiques comme toutes les courbes paramétrées du plan $\R^2$ de coordonnées $(t, x)$ qui satisfont l'équation différentielle ordinaire :
+		\item On définit les courbes caractéristiques comme toutes les courbes paramétrées du plan $\R^2$ de coordonnées $(t, x)$ qui satisfont l'équation différentielle ordinaire :
 		      \[
 			      \frac{dx}{dt} = c(t, x).
 		      \]
@@ -263,7 +263,14 @@
 
 \begin{solution}
 	\addcontentsline{toc}{subsection}{Solution de l'exercice 2}
-    On veut montrer que $u(t, x)$ est constant le long des lignes caractéristiques,
+    L'équation de transport, qui est une EDP quasi-linéaire du premier ordre, aura la forme suivante :
+    \begin{equation*}
+        a(t, x, u)u_t + b(t, x, u)u_x = f(t, x, u)
+    \end{equation*}
+
+    mais on a une équation avec $a(t, x, u) = 1$, $b(t, x, u) = c(t, x)$ et $f(t, x, u) = 0$. Ce satisfait la condition d'être une EDP quasi-linéaire du premier ordre.
+	
+	On veut montrer que $u(t, x)$ est constant le long des lignes caractéristiques,
     \begin{align*}
         \frac{dx}{dt} = c(t,x)
     \end{align*}
@@ -304,6 +311,12 @@
         \kappa = x - \frac{t^3}{3}
     \]
 
+	Les lignes caractéristiques oeuvent étre dessinées comme suit :
+	\begin{figure}[h]
+		\centering
+		\includesvg[width=0.6\textwidth]{deues.svg}
+	\end{figure}
+
     On veut montrer que $\xi(t,x)=x-\frac{t^3}{3}$ est constante sur les lignes caracteristique de $u_t + t^2u_x=0$, on peut trouver le vecteur qui est tengente des lignes caractéristiques.
 
     On a developpé a idee pour $a(t,x)u_t + b(t,x)u_x=0$ à liéu $L=(a(t,x),b(t,x))$ qui est area du vecteur caractéristique. Nos equations satisfait que les suivantes : 
@@ -331,8 +344,6 @@
     \end{align*}
 
     Alors, $L[\xi] = 0$ cela signifie que $u(t,x)$ est constant le long des lignes caractéristiques. 
-
-    ?
 
     En fait on a une system comme suivante :
     \begin{align*}
